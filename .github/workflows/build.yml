@@ -65,7 +65,7 @@ jobs:
         cd module
         make
     - name: Upload kernel module artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v5
       with:
         name: looking-glass-module
         path: module/looking-glass.ko
@@ -196,7 +196,7 @@ jobs:
         cd LGIdd
         makensis -DBUILD_32BIT -DIVSHMEM installer.nsi
     - name: Upload IDD installers
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v5
       with:
         name: lgidd-installers
         path: idd/x64/Release/LGIdd/*.exe
